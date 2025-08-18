@@ -1,0 +1,2 @@
+# codewars_go
+katas
