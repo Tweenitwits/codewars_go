@@ -10,9 +10,14 @@ Sam Harris => S.H
 patrick feeney => P.F
 */
 
-package main
+package kata
+
+import (
+	"strings"
+)
 
 func AbbrevName(name string) string {
-	runes := []rune(name)
-	return string(runes)
+	tmp := strings.Split(name, " ")
+	newWord := strings.ToUpper(string(tmp[0][0])) + "." + strings.ToUpper(string(tmp[1][0]))
+	return newWord
 }
