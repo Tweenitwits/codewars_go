@@ -22,5 +22,5 @@ func LoveFunc(flower1, flower2 int) bool {
 }
 
 func main() {
-	fmt.Println(LoveFunc(1, 4))
+	fmt.Println(LoveFunc(2, 4))
 }
