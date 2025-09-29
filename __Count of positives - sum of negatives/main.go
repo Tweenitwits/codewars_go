@@ -17,5 +17,15 @@ package kata
 
 func CountPositivesSumNegatives(numbers []int) []int {
 	var res []int
-	return res // your code here
+	var positives, negatives int
+	for _, val := range numbers {
+		if val < 0 {
+			negatives += val
+		} else if val > 0 {
+			positives += 1
+		}
+	}
+	res = append(res, positives)
+	res = append(res, negatives)
+	return res
 }
