@@ -14,12 +14,13 @@ import "fmt"
 
 func OddCount(n int) int {
 	res := 0
+	n = n / 100
 	for i := 1; i < n; i++ {
 		if i%2 != 0 {
 			res += 1
 		}
 	}
-	return res
+	return res * 100
 }
 
 func main() {
