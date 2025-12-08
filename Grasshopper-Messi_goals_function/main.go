@@ -1,0 +1,27 @@
+/*
+Messi is a soccer player with goals in three leagues:
+
+LaLiga
+Copa del Rey
+Champions
+Complete the function to return his total number of goals in
+all three leagues.
+
+Note: the input will always be valid.
+
+For example:
+
+5, 10, 2  -->  17
+*/
+
+package main
+
+import "fmt"
+
+func Goals(laLigaGoals, copaDelReyGoals, championsLeagueGoals int) int {
+	return laLigaGoals + championsLeagueGoals + copaDelReyGoals
+}
+
+func main() {
+	fmt.Println(Goals(12, 14, 11))
+}
