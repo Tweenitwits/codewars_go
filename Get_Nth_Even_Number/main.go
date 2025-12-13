@@ -1,0 +1,28 @@
+/*
+Return the Nth Even Number
+
+Example(Input --> Output)
+
+1 --> 0 (the first even number is 0)
+3 --> 4 (the 3rd even number is 4 (0, 2, 4))
+100 --> 198
+1298734 --> 2597466
+The input will not be 0.
+*/
+
+package main
+
+import "fmt"
+
+func NthEven(n int) int {
+	if n > 2 {
+		return n*2 - 2
+	} else if n == 2 {
+		return 2
+	}
+	return 0
+}
+
+func main() {
+	fmt.Println(NthEven(2))
+}
