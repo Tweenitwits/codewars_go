@@ -5,7 +5,8 @@ The function should return whether a is lower than, close to, or higher than b.
 Please note the following:
 
 When a is close to b, return 0.
-For this challenge, a is considered "close to" b if margin is greater than or equal to the absolute distance between a and b.
+For this challenge, a is considered "close to" b if margin is greater than or
+equal to the absolute distance between a and b.
 Otherwise...
 
 When a is less than b, return -1.
@@ -21,22 +22,21 @@ Tip: Some languages have a way to make parameters optional.
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func CloseCompare(a, b, margin float64) int {
-	diffA := a - b
-	diffB := b - a
-	if a > b {
-		if margin >= diffA {
-			return 0
+	diff := math.Abs(a - b)
+	if margin >= diff {
+		return 0
+	} else {
+		if a > b {
+			return 1
 		}
-		return -1
-	} else if a > b {
-		if margin >= diffB {
-			return 0
-		}
-		return 1
 	}
+	return -1
 }
 
 func main() {

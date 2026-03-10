@@ -23,26 +23,8 @@ Note: you shouldn't escape the \n, it should work as a new line.
 
 package main
 
-// func ToCsvText(array [][]int) string {
-//     for i, row := range array {
+func ToCsvText(array [][]int) string {
+	for i, row := range array {
 
-// 	}
-// }
-
-import "fmt"
-
-func main() {
-	// A 2D slice
-	matrix := [][]int{
-		{1, 2, 3},
-		{4, 5, 6},
-		{7, 8, 9},
-	}
-
-	fmt.Println("Iterating through elements:")
-	for i, row := range matrix {
-		for j, element := range row {
-			fmt.Printf("Element at row %d, column %d: %d\n", i, j, element)
-		}
 	}
 }
