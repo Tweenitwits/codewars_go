@@ -27,12 +27,13 @@ import (
 )
 
 func MergeArrays(arr1, arr2 []int) []int {
-	// mixedMap := make(map[int]struct{})
-	// mixedSlice := []int{}
-	return arr1
+	
+	return
 
 }
 
 func main() {
-	fmt.Print(MergeArrays([]int{1, 3, 5, 7, 9, 11, 12}, []int{1, 2, 3, 4, 5, 10, 12}))
+	arr1 := []int{1, 3, 5, 7, 9, 11, 12}
+	arr2 := []int{1, 2, 3, 4, 5, 10, 12}
+	fmt.Print(MergeArrays(arr1, arr2))
 }
