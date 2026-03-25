@@ -24,13 +24,49 @@ package main
 
 import (
 	"fmt"
+	"sort"
 )
 
-func MergeArrays(arr1, arr2 []int) []int {
-	
-	return
+funt MergeArrays(arr1, arr2 []int) []int {
+	result := []int{}
+	uniqueMap := make(map[int]struct{})
+	combined := append(arr1, arr2...)
 
+	for _, val := range combined {
+		if _, exists := uniqueMap[val]; !exists {
+			uniqueMap[val] = struct{}{}
+			result = append(result, val)
+		}
+	}
+
+	sort.Ints(result)
+
+	return result
 }
+
+// func MergeArrays(arr1, arr2 []int) []int {
+// 	lenArrs := len(arr1) + len(arr2)
+// 	uniqueMap := make(map[int]struct{}, lenArrs)
+// 	result := make([]int, 0, lenArrs)
+
+// 	for _, val := range arr1 {
+// 		if _, exists := uniqueMap[val]; !exists {
+// 			uniqueMap[val] = struct{}{}
+// 			result = append(result, val)
+// 		}
+// 	}
+
+// 	for _, val := range arr2 {
+// 		if _, exists := uniqueMap[val]; !exists {
+// 			uniqueMap[val] = struct{}{}
+// 			result = append(result, val)
+// 		}
+// 	}
+// 	sort.Ints(result)
+
+// 	return result
+
+// }
 
 func main() {
 	arr1 := []int{1, 3, 5, 7, 9, 11, 12}
